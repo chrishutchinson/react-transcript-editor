@@ -1,0 +1,20 @@
+@value color-subt-green, color-darkest-grey, color-labs-red from '@bbc-transcript-editor/style-guide/colours.module.css';
+
+/*
+Giving the editor a oveflow
+https://github.com/facebook/draft-js/issues/528
+*/
+
+.editor :global(.public-DraftEditor-content) {
+  max-height: 75vh;
+  overflow: auto;
+  padding: 8px 16px;
+  background-color: white;
+}
+
+/* Mobile devices */
+@media (max-width: 768px) {
+  .editor :global(.public-DraftEditor-content) {
+    margin: 0 auto;
+  }
+}
